@@ -144,6 +144,13 @@ main {
 .links img {
     width: 16px;
     height: 16px;
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+.links img:hover {
+    opacity: 0.8;
+    transform: scale(1.1, 1.1)
 }
 
 .arrow-down {
