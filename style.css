@@ -90,8 +90,43 @@ main {
     padding: 0.8rem;
     border-radius: 100%;
     cursor: pointer;
+    transition: all 300ms ease; 
 }
 
 .share:hover {
+    background-color: var(--color3);
     opacity: 0.8;
+}
+
+/* media queries */
+
+@media (max-width: 880px) {
+    .card-container {
+        grid-template-columns: 280px;
+        grid-template-rows: 220px auto;
+        width: 280px;
+        height: 90vh;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .text-content {
+        font-size: 0.8rem;
+        color: var(--color2);
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    
+    .avatar {
+        width: 35px;
+    }
+
+    .name-date {
+        font-size: 1.1rem;
+    }
+    
+    .name-date p {
+        font-size: 0.8rem;
+    }
 }
