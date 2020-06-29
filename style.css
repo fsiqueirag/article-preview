@@ -171,7 +171,7 @@ main {
         grid-template-columns: 280px;
         grid-template-rows: 220px auto;
         width: 280px;
-        height: 530px;
+        height: 480px;
     }
 
     .title {
@@ -189,7 +189,7 @@ main {
     }
 
     .name-date {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
     
     .name-date p {
@@ -201,7 +201,7 @@ main {
         margin: auto;
         position: relative;
         right: -85px;
-        top: 135px;
+        top: 130px;
         opacity: 0;
         transition: opacity 200ms ease;
     }
