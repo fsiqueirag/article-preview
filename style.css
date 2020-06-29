@@ -19,13 +19,15 @@
 main {
     background-color: var(--color4);
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 40px;
     align-items: center;
 }
 
 .card-container {
     display: grid;
     grid-template-columns: 340px auto;
+    gap: 0;
     width: 800px;
     height: 280px;
     margin: auto;
@@ -85,6 +87,8 @@ main {
 }
 
 .share {
+    position: relative;
+    z-index: 2;
     align-self: center;
     background-color: var(--color4);
     padding: 0.8rem;
@@ -98,14 +102,69 @@ main {
     opacity: 0.8;
 }
 
-/* media queries */
+/* compartir */
+
+.popup-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+}
+
+.popup {
+    width: 180px;
+    margin: auto;
+    position: relative;
+    right: -333px;
+    top: 17px;
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+.links {
+    background-color: var(--color1);
+    width: 180px;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.links p {
+    font-size: 0.8rem;
+    color: var(--color3);
+}
+
+.links img {
+    width: 16px;
+    height: 16px;
+}
+
+.arrow-down {
+    position: relative;
+    margin: auto;
+    width: 0; 
+    bottom: 8px;
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;    
+    border-top: 20px solid var(--color1);
+  }
+
+ /* media queries  */
 
 @media (max-width: 880px) {
     .card-container {
         grid-template-columns: 280px;
         grid-template-rows: 220px auto;
         width: 280px;
-        height: 90vh;
+        height: 530px;
     }
 
     .title {
@@ -128,5 +187,15 @@ main {
     
     .name-date p {
         font-size: 0.8rem;
+    }
+
+    .popup {
+        width: 180px;
+        margin: auto;
+        position: relative;
+        right: -85px;
+        top: 135px;
+        opacity: 0;
+        transition: opacity 200ms ease;
     }
 }
