@@ -167,6 +167,10 @@ main {
  /* media queries  */
 
 @media (max-width: 880px) {
+    body {
+        height: 100vh;
+    }
+
     .card-container {
         grid-template-columns: 280px;
         grid-template-rows: 220px auto;
