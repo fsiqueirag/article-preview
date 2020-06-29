@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 13px;
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+    /* variables */
+    --color1: hsl(217, 19%, 35%);
+    --color2: hsl(214, 17%, 51%);
+    --color3: hsl(212, 23%, 69%);
+    --color4: hsl(210, 46%, 95%);
+}
+
+main {
+    background-color: var(--color4);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    height: 300px;
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgb(185, 185, 185);
+}
+
+.drawers-image {
+    height: 300px;
+    width: auto;
+}
+
+/* contenido */
+
+.card-content {
+    padding: 2rem;
+    color: var(--color1);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-text {
+    width: 100%;
+    text-align: justify;
+}
+
+.card-text  h2{
+    margin-bottom: 1.5rem;
+}
+
+.card-text p {
+    color: var(--color2);
+}
+
+/* contacto */
+
+.author {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+
+.name-date p {
+    color: var(--color2);
+}
+
+.share {
+    background-color: var(--color4);
+    border-radius: 100%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.share:hover {
+    transition: all 100ms ease-in;
+    background-color: var(--color3);
+}
+
+.popup {
+    display: flex;
+    opacity: 0;
+    position: fixed;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color1);
+    width: 230px;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    color: var(--color3);
+    right: 10vw;
+    bottom: 40vh;
+    transition: opacity 200ms ease-in-out;
+}
+
+.arrow-down {
+    position: fixed;
+    z-index: 2;
+    bottom: 38vh;
+    right: 18vw;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;    
+    border-top: 20px solid var(--color1);
+  }
+
+.popup img{
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+.popup img:hover{
+    opacity: 0.8;
+}
+
+
+@media (max-width: 599px) {
+    /* .culo {
+        position:sticky;
+        width: 100%;
+        height: 4rem;
+        z-index: 1;
+        background-color: var(--color1);
+    } */
+    .card-content {
+        padding: 1rem;
+    }
+
+    .card-text  h2{
+        margin-bottom: 0.8rem;
+    }
+
+    .drawers-image {
+        height: auto;
+        width: 70vw;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        width: 70vw;
+    }
+
+    .card-content { 
+        width: 100%;
+        padding: 2rem;
+        margin: auto;
+        align-items: center;
+    }
+
+    .card-text h2 {
+        font-size: 1rem;
+    }
+
+    .card-text p {
+        font-size: 0.8rem;
+    }
+
+    .name-date h2 {
+        font-size: 0.8rem;
+    }
+
+    .name-date p {
+        font-size: 0.8rem;
+    }
+    .author {
+        margin-top: 2rem;
+    }
+    .avatar {
+        width: 30px;
+    }
+    .share {
+        width: 1.9rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .card-content {
+        padding: 1rem;
+    }
+
+    .card-text  h2{
+        margin-bottom: 0.8rem;
+    }
+
+    .drawers-image {
+        height: 150px;
+    }
+
+    .card {
+        height: 150px;
+    }
+
+    .card-text h2 {
+        font-size: 0.8rem;
+    }
+
+    .card-text p {
+        font-size: 0.6rem;
+    }
+
+    .name-date h2 {
+        font-size: 0.8rem;
+    }
+
+    .name-date p {
+        font-size: 0.6rem;
+    }
+    .avatar {
+        width: 20px;
+    }
+    .share {
+        width: 1.5rem;
+        padding: 0.5rem;
+    }
+    .arrow-down {
+        right: 16.5vw;
+      }
+}
+
+@media (min-width: 825px) {
+    .drawers-image {
+        height: 250px;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .card-text h2 {
+        font-size: 1rem;
+    }
+
+    .card-text p {
+        font-size: 0.8rem;
+    }
+
+    .name-date h2 {
+        font-size: 1rem;
+    }
+
+    .name-date p {
+        font-size: 0.8rem;
+    }
+    .avatar {
+        width: 35px;
+    }
+    .share {
+        width: 2.4rem;
+    }
+    .arrow-down {
+        right: 16.8vw;
+      }
+}
+
+@media (min-width: 1050px) {
+    .drawers-image {
+        height: 300px;
+    }
+    .card {
+        height: 300px;
+    }
+    .card-content {
+        margin-top: 0;
+        padding: 2rem;
+    }
+    .card-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-text p {
+        font-size: 1rem;
+    }
+    .name-date h2 {
+        font-size: 1.3rem;
+        
+    }
+    
+    .name-date p {
+        font-size: 1rem;
+    }
+
+    .share {
+        width: 2.7rem;
+    }
+    .arrow-down {
+        right: 17.5vw;
+      }
+}
+
+@media (min-width: 1250px) {
+    .drawers-image {
+        height: 300px;
+    }
+    .card {
+        height: 300px;
+    }
+    .card-content {
+        margin-top: 0;
+        padding: 2rem;
+    }
+    .card-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .card-text p {
+        font-size: 1.2rem;
+    }
+    .name-date h2 {
+        font-size: 1.3rem;
+        
+    }
+    .avatar {
+        width: 50px;
+    }
+    .name-date p {
+        font-size: 1rem;
+    }
+
+    .share {
+        width: 2.8rem;
+    }
+    .arrow-down {
+        right: 18vw;
+      }
+}
